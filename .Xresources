@@ -1,0 +1,29 @@
+!xterm
+
+XTerm.termname: xterm-256color
+XTerm.vt100.locale: false
+XTerm.vt100.utf8: true
+XTerm.vt100.saveLines: 4096
+XTerm.vt100.foreground: white
+XTerm.vt100.background: black
+XTerm.vt100.faceName: Liberation Mono:size=12:antialias=true
+!XTerm.vt100.font: 7x13
+
+!urxvt
+
+URxvt.letterSpace: 1
+URxvt.lineSpace: 0
+URxvt.cursorBlink: true
+URxvt.cursorUnderline: false
+URxvt.scrollBar: false
+URxvt.scrollBar_right: false
+URxvt.urgentOnBell: true
+URxvt.iso14755: false
+URxvt.geometry: 500x700
+URxvt.depth: 32
+URxvt.background: rgb:0000/0000/0000
+URxvt.foreground: rgb:eeee/eeee/eeee
+URxtx.font: xft:monospace:size=16
+URxvt.saveline: 2048
+URxvt.transparent: true
+URxvt.shading: 60
