@@ -1,9 +1,8 @@
 source /usr/share/nvim/archlinux.vim
-
-set number relativenumber
+source ~/.config/nvim/colors/colors.vim
+set number relativenumber cursorline mouse=
 syntax on
 filetype plugin indent on
-colorscheme elflord
 
 call plug#begin('~/.vim/plugged')
     Plug 'ThePrimeagen/vim-be-good'
