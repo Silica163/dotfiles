@@ -1,0 +1,25 @@
+diff --git a/config.def.h b/config.def.h
+index d805331..af571d5 100644
+--- a/config.def.h
++++ b/config.def.h
+@@ -1,7 +1,7 @@
+ /* See LICENSE file for copyright and license details. */
+ 
+ /* interval between updates (in ms) */
+-const unsigned int interval = 1000;
++const unsigned int interval = 500;
+ 
+ /* text to show if no value can be retrieved */
+ static const char unknown_str[] = "n/a";
+@@ -65,5 +65,10 @@ static const char unknown_str[] = "n/a";
+  */
+ static const struct arg args[] = {
+ 	/* function format          argument */
+-	{ datetime, "%s",           "%F %T" },
++	{ keymap  , "[%s] ",           NULL    },
++	{ netspeed_tx, "tx:%7sB/s | ",  "wlan0"},
++	{ run_command, "vol:%3s | ", "amixer get Master | grep -E [0-9]+% -o -m 1"},
++	{ cpu_perc, "cpu:%3s%% | ",           NULL    },
++	{ ram_perc, "ram:%3s%% | ",           NULL    },
++	{ datetime, "%s",           "%d-%b-%Y %H:%M" },
+ };

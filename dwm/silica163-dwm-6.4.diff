@@ -1,5 +1,5 @@
 diff --git a/config.def.h b/config.def.h
-index 9efa774..43b4929 100644
+index 9efa774..2c23c5c 100644
 --- a/config.def.h
 +++ b/config.def.h
 @@ -1,21 +1,30 @@
@@ -42,7 +42,13 @@ index 9efa774..43b4929 100644
  };
  
  /* tagging */
-@@ -37,6 +46,7 @@ static const int nmaster     = 1;    /* number of clients in master area */
+@@ -32,11 +41,12 @@ static const Rule rules[] = {
+ };
+ 
+ /* layout(s) */
+-static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
++static const float mfact     = 0.50; /* factor of master area size [0.05..0.95] */
+ static const int nmaster     = 1;    /* number of clients in master area */
  static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
  static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
  
