@@ -1,5 +1,5 @@
 diff --git a/config.def.h b/config.def.h
-index 9efa774..2c23c5c 100644
+index 9efa774..7c26369 100644
 --- a/config.def.h
 +++ b/config.def.h
 @@ -1,21 +1,30 @@
@@ -100,7 +100,7 @@ index 9efa774..2c23c5c 100644
  	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
  	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
  	{ MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
-@@ -95,6 +110,10 @@ static const Key keys[] = {
+@@ -95,6 +110,11 @@ static const Key keys[] = {
  	TAGKEYS(                        XK_8,                      7)
  	TAGKEYS(                        XK_9,                      8)
  	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
@@ -108,10 +108,11 @@ index 9efa774..2c23c5c 100644
 +	/*increse decrese volume*/
 +	{ MODKEY|ALTMASK,               XK_KP_Add,    spawn,       {.v = volup }},
 +	{ MODKEY|ALTMASK,               XK_KP_Subtract,spawn,      {.v = voldown }},
++	{ 0,				XK_Print,	spawn,	   SHCMD("ffmpeg -f x11grab -i $DISPLAY -draw_mouse 0 -frames:v 1 \"$HOME/Pictures/screenshort/$(date).png\"")},	
  };
  
  /* button definitions */
-@@ -103,6 +122,8 @@ static const Button buttons[] = {
+@@ -103,6 +123,8 @@ static const Button buttons[] = {
  	/* click                event mask      button          function        argument */
  	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
  	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} },
@@ -120,7 +121,7 @@ index 9efa774..2c23c5c 100644
  	{ ClkWinTitle,          0,              Button2,        zoom,           {0} },
  	{ ClkStatusText,        0,              Button2,        spawn,          {.v = termcmd } },
  	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
-@@ -110,7 +131,5 @@ static const Button buttons[] = {
+@@ -110,7 +132,5 @@ static const Button buttons[] = {
  	{ ClkClientWin,         MODKEY,         Button3,        resizemouse,    {0} },
  	{ ClkTagBar,            0,              Button1,        view,           {0} },
  	{ ClkTagBar,            0,              Button3,        toggleview,     {0} },

@@ -19,8 +19,13 @@ case ${TERM} in
     ;;
 esac
 
+# completion
 [ -r /usr/share/bash-completion/bash_completion   ] && . /usr/share/bash-completion/bash_completion
 
+bind '"\e[A": history-search-backward'
+bind '"\e[B": history-search-forward'
+
+#alias
 alias diff='diff --color=auto'
 alias ip='ip -c'
 alias ls='ls --color=auto'
@@ -30,8 +35,8 @@ alias social="firefox -P social_media"
 alias younme="firefox -P just_you_and_me"
 alias go_to_school="firefox -P school_profile"
 
-alias sudo="echo Use [doas] please."
-
+alias sudo="doas"
+alias feh="feh --no-fehbg"
 
 audio_switch (){
 	audioin=$(wpctl status | grep Sinks -A2 | grep -E [0-9]{2}\.\ Built-in -o | grep -oE [0-9]{2})
@@ -49,9 +54,8 @@ audio_switch (){
 	printf "switch to %s \n" "$(wpctl status | grep Sinks -A3 | grep -oE '\*.+')";
 }
 
-alias short_all="sleep 2 && import -window root \"$HOME/Pictures/screenshort/\$(date).png\""
-
+#env
 export CONFIG=$HOME/.config/
-
 export HISTCONTROL=ignoredups
 HISTSIZE=50000
+export HISTSIZE=50000
