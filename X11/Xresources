@@ -25,23 +25,45 @@ URxvt.background: rgba:0000/0000/0000/aaaa
 URxvt.foreground: rgb:eeee/eeee/eeee
 URxvt.font: xft:monospace:size=10
 URxvt.saveline: 4096
-!URxvt.transparent: true
-!URxvt.shading: 20
+
+! old theme
 !URxvt.color0: #000000
-URxvt.color1: #cd0000
-URxvt.color2: #00cd00
-URxvt.color3: #cdcd00
-URxvt.color4: #0000ee
-URxvt.color5: #cd00cd
-URxvt.color6: #00cdcd
-URxvt.color7: #e5e5e5
-URxvt.color8: #7f7f7f
-URxvt.color9: #ff0000
+!URxvt.color1: #cd0000
+!URxvt.color2: #00cd00
+!URxvt.color3: #cdcd00
+!URxvt.color4: #0000ee
+!URxvt.color5: #cd00cd
+!URxvt.color6: #00cdcd
+!URxvt.color7: #e5e5e5
+!
+!URxvt.color8: #7f7f7f
+!URxvt.color9: #ff0000
+!URxvt.color10: #00ff00
+!URxvt.color11: #ffff00
+!URxvt.color12: #5c5cff
+!URxvt.color13: #af00ff
+!URxvt.color14: #00ffff
+!URxvt.color15: #ffffff
+
+! palette 01
+URxvt.color0: #262626
+URxvt.color1: #ff0000
+URxvt.color2: #00d700
+URxvt.color3: #ffaf00
+URxvt.color4: #5f5fff
+URxvt.color5: #af5fff
+URxvt.color6: #00afff
+URxvt.color7: #b2b2b2
+
+URxvt.color8: #808080
+URxvt.color9: #ff5f00
 URxvt.color10: #00ff00
-URxvt.color11: #ffff00
-URxvt.color12: #5c5cff
-URxvt.color13: #af00ff
-URxvt.color14: #00ffff
+URxvt.color11: #ffd700
+URxvt.color12: #5f87ff
+URxvt.color13: #af87ff
+URxvt.color14: #00d7ff
 URxvt.color15: #ffffff
+
+
 URxvt.keysym.Shift-Control-V: eval:paste_clipboard 
 URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard 
