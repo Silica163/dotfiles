@@ -12,7 +12,7 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = {
 	"monospace:size=10",
-	"Sarabun:size=20",
+	"Sarabun:size=10",
 	"FontAwesome:size=10"
 };
 static const char dmenufont[]       = "monospace:size=10";
@@ -36,7 +36,7 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
+	{ "Gimp",     NULL,       NULL,       0,            0,           -1 },
 	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
 };
 
@@ -114,7 +114,10 @@ static const Key keys[] = {
 	/*increse decrese volume*/
 	{ MODKEY|ALTMASK,               XK_KP_Add,    spawn,       {.v = volup }},
 	{ MODKEY|ALTMASK,               XK_KP_Subtract,spawn,      {.v = voldown }},
-	{ 0,				XK_Print,	spawn,	   SHCMD("ffmpeg -f x11grab -i :0 -frames:v 1 \"$HOME/Pictures/screenshort/$(date).png\"")},	
+
+	/* screen capture */
+	{ 0,				XK_Print,	spawn,	   SHCMD("ffmpeg -f x11grab -draw_mouse 0 -i $DISPLAY -v:f 1 \"$HOME/Pictures/screenshort/$(date +%Y-%b-%d_%a_%T\ %:::z).png\"")},	
+	{ MODKEY|ALTMASK,				XK_f,		spawn,			SHCMD("firefox")}
 };
 
 /* button definitions */
