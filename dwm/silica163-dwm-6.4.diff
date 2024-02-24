@@ -1,5 +1,5 @@
 diff --git a/config.def.h b/config.def.h
-index 9efa774..b11ba86 100644
+index 9efa774..40b9c2e 100644
 --- a/config.def.h
 +++ b/config.def.h
 @@ -1,21 +1,30 @@
@@ -116,7 +116,7 @@ index 9efa774..b11ba86 100644
 +	{ MODKEY|ALTMASK,               XK_KP_Subtract,spawn,      {.v = voldown }},
 +
 +	/* screen capture */
-+	{ 0,				XK_Print,	spawn,	   SHCMD("ffmpeg -f x11grab -draw_mouse 0 -i $DISPLAY -v:f 1 \"$HOME/Pictures/screenshort/$(date +%%Y-%%b-%%d_%%a_%%T-%%:::z).png\"")},
++	{ 0,				XK_Print,	spawn,	   SHCMD("ffmpeg -f x11grab -draw_mouse 0 -i $DISPLAY -v:f 1 \"$HOME/Pictures/screenshort/$(date).png\"")},
 +	{ MODKEY|ALTMASK,				XK_f,		spawn,			SHCMD("firefox")}
  };
  

@@ -116,7 +116,7 @@ static const Key keys[] = {
 	{ MODKEY|ALTMASK,               XK_KP_Subtract,spawn,      {.v = voldown }},
 
 	/* screen capture */
-	{ 0,				XK_Print,	spawn,	   SHCMD("ffmpeg -f x11grab -draw_mouse 0 -i $DISPLAY -v:f 1 \"$HOME/Pictures/screenshort/$(date +%%Y-%%b-%%d_%%a_%%T-%%:::z).png\"")},
+	{ 0,				XK_Print,	spawn,	   SHCMD("ffmpeg -f x11grab -draw_mouse 0 -i $DISPLAY -v:f 1 \"$HOME/Pictures/screenshort/$(date).png\"")},
 	{ MODKEY|ALTMASK,				XK_f,		spawn,			SHCMD("firefox")}
 };
 
